@@ -38,10 +38,10 @@
             height: 30rem;
             background-color: rgba(255, 255, 255, 0.2);
             border-radius: 20px 20px 16px 16px;
-            mask-image: radial-gradient(101% 10.5% at 50% 102%, transparent 50%, white 52%);
-            -webkit-mask-image: radial-gradient(103% 10.5% at 50% 102%, transparent 50%, white 52%);
-            -webkit-mask-image: radial-gradient(103% 11% at 50% 102%, transparent 50%, white 51%);
-            mask-image: radial-gradient(103% 11% at 50% 102%, transparent 50%, white 51%);
+            mask-image: radial-gradient(102% 11% at 50% 102%, transparent 50%, white 52%);
+            -webkit-mask-image: radial-gradient(102% 11% at 50% 102%, transparent 50%, white 52%);
+            -webkit-mask-image: radial-gradient(102% 11% at 50% 102%, transparent 50%, white 52%);
+            mask-image: radial-gradient(102% 11% at 50% 102%, transparent 50%, white 52%);
         }
 
         .slides {
@@ -64,7 +64,6 @@
                 transform 1s cubic-bezier(0.33, 0, 0.2, 1);
             z-index: 1;
             transform: translateX(40px) scale(0.98);
-            /* Always comes in from right */
         }
 
         .slide.active {
@@ -79,7 +78,6 @@
         .slide.exiting {
             opacity: 0;
             transform: translateX(-40px) scale(0.98);
-            /* Always exits to left */
             transition:
                 opacity 0.8s cubic-bezier(0.8, 0, 0.6, 1),
                 transform 1s cubic-bezier(0.8, 0, 0.6, 1);
@@ -198,7 +196,6 @@
             top: 10px;
             font-size: 0.75rem;
             color: rgba(255, 255, 255, 1);
-            /* Ensuring it's white when active */
             padding: 0 0.25rem;
             border-radius: 0.25rem;
         }
@@ -511,7 +508,6 @@
             left: 0;
           }
           
-          /* Hiding with sliding + fading */
           .carousel-arrow.hidden.left {
             transform: translate(-50px, -50%);
             opacity: 0;
@@ -688,9 +684,7 @@
 
         .mood-emoji.selected {
             font-size: 2.5rem;
-            /* Increased size for the selected emoji */
             transform: scale(1.5);
-            /* Slightly larger scaling for emphasis */
         }
 
         .mood-results {
@@ -702,7 +696,6 @@
 
         .mood-results.show {
             max-height: 1000px;
-            /* large enough */
             opacity: 1;
             margin-top: 1rem;
         }
@@ -743,6 +736,7 @@
             cursor: pointer;
             padding: 0.25rem 0.8rem;
             min-height: 2rem;
+            font-size: 1rem;
         }
 
         .language img {
@@ -792,6 +786,10 @@
             min-height: 2rem;
             padding: 0.25rem 1rem;
             color: black;
+            display: flex
+        ;
+            align-items: center;
+            line-height: 1;
         }
 
         .background-container {
@@ -799,7 +797,6 @@
             width: 100%;
         }
 
-        /* Background image with the blur effect */
         #backgroundImage {
             position: absolute;
             top: 0;
@@ -808,10 +805,11 @@
             bottom: 0;
             background-size: cover;
             background-position: center;
-            filter: blur(30px);
+            filter: blur(28px);
             transition: filter 1s ease-in-out;
             z-index: -1;
             overflow: hidden;
+            height: 120vh;
         }
 
         #backgroundImage::after {
@@ -1079,7 +1077,6 @@
             .logo-mobile {
                 display: block;
                 height: 3.5rem;
-                /* Adjust size as needed */
             }
 
             .head img {
@@ -1093,7 +1090,7 @@
 
             .head {
                 height: 5rem;
-                padding: 0 1.5rem;
+                padding: 0;
             }
 
             .carousel-container {
@@ -1155,6 +1152,9 @@
             }
             .country{
                 margin-bottom: 72px;
+            }
+            .carousel-container{
+                mask-image: radial-gradient(101% 10% at 50% 102%, transparent 49%, white 50%);
             }
 
 
