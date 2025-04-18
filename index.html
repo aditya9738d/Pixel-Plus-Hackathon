@@ -33,9 +33,9 @@
         .carousel-container {
             position: relative;
             width: 100%;
-            width: calc(100vw - 4rem);
+            width: calc(100vw - 6rem);
             margin: auto;
-            height: 30rem;
+            height: 35.5rem;
             background-color: rgba(255, 255, 255, 0.2);
             border-radius: 20px 20px 16px 16px;
             mask-image: radial-gradient(102% 11% at 50% 102%, transparent 50%, white 52%);
@@ -88,14 +88,15 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            display: flex;
+            display: flex
+        ;
             flex-direction: column;
             text-align: center;
-            padding: 0 0 4.5rem 3.5rem;
-            height: 30rem;
-            max-width: 41rem;
             justify-content: flex-end;
             align-items: flex-start;
+            padding: 0 0 6.25rem 5rem;
+            height: 35.375rem;
+            max-width: 41rem;
         }
 
         .overlay h1 {
@@ -129,8 +130,8 @@
         }
 
         .overlay img {
-            height: 3rem;
             margin: 0.5rem 0px;
+            height: 5rem;
         }
 
         .rating {
@@ -158,6 +159,7 @@
             justify-content: flex-start;
             padding-top: 1rem;
             width: 100%;
+            padding-bottom: 2rem;
         }
 
         .form-group {
@@ -251,11 +253,11 @@
         }
 
         .left-arrow {
-            left: 16px;
+            left: 32px;
         }
 
         .right-arrow {
-            right: 16px;
+            right: 32px;
         }
 
         .light {
@@ -275,7 +277,7 @@
         .dot {
             position: relative;
             width: 100%;
-            height: 3.5px;
+            height: 4px;
             background: rgb(128, 128, 128);
             border-radius: 0.125rem;
             cursor: pointer;
@@ -335,7 +337,6 @@
 
         #playPauseBtn .fa {
             font-size: 16px;
-            padding: 0 5px;
         }
 
         .logo {
@@ -382,16 +383,15 @@
         .TrendingSection {
             max-width: 100%;
             overflow-x: auto;
-            padding: 0 4rem;
+            padding: 0 9.25rem;
             margin-top: 10px;
             margin-bottom: 2rem;
         }
 
         .TrendingSection h2 {
-            font-size: 1.25rem;
+            font-size: 2rem;
             font-weight: bold;
             color: #d5d5d5c4;
-            margin-left: 2rem;
         }
 
         .section h2 {
@@ -523,11 +523,11 @@
 
 
         .sectionContainer {
-            padding: 0 4.5rem;
+            padding: 0 9.25rem;
         }
 
         .sectionContainer h2 {
-            font-size: 1.25rem;
+            font-size: 2rem;
             color: white;
             margin-bottom: 0.75rem;
         }
@@ -573,13 +573,13 @@
         }
 
         .faq {
-            padding: 0 5rem;
+            padding: 0 9.25rem;
             margin-top: 2rem;
         }
 
         .faq h2 {
             color: white;
-            font-size: 1.25rem;
+            font-size: 2rem;
         }
 
         .faq button {
@@ -648,9 +648,9 @@
 
         .mood-box h2 {
             margin-bottom: 1rem;
-            padding: 0 5rem;
+            padding: 0 9.25rem;
             color: white;
-            font-size: 1.25rem;
+            font-size: 2rem;
         }
 
         .mood-emoji-row {
@@ -875,7 +875,6 @@
         }
 
         h1 {
-            margin-bottom: 20px;
             color: rgb(255, 255, 255);
             font-size: 1rem;
             font-weight: 500;
@@ -920,7 +919,7 @@
         }
 
         .footer {
-            padding: 0 5rem;
+            padding: 0 9.25rem;
             margin-top: 2rem;
             font-size: 1rem;
             font-weight: 400;
@@ -945,7 +944,7 @@
 
         .footer-links {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             padding: 4px;
             line-height: 1.5;
             font-size: 0.875rem;
@@ -1043,6 +1042,7 @@
             .overlay h2 {
                 align-self: center;
                 margin-bottom: 1rem;
+                font-size: 1.25rem;
             }
 
             .overlay h6 {
@@ -1095,6 +1095,8 @@
 
             .carousel-container {
                 width: 100%;
+                mask-image: radial-gradient(101% 10% at 50% 102%, transparent 49%, white 50%);
+                height: 27.25rem;
             }
 
             .background-container {
@@ -1112,6 +1114,7 @@
             .TrendingSection h2 {
                 margin: 0;
                 padding-bottom: 10px;
+                font-size: 1.25rem;
             }
 
             .carousel {
@@ -1135,12 +1138,20 @@
                 padding: 0 1.5rem;
             }
 
+            .faq h2{
+                font-size: 1.25rem;
+            }
+            .sectionContainer h2{
+                font-size: 1.25rem;
+            }
+
             .mood-box {
                 padding: 0 1.5rem;
             }
 
             .mood-box h2 {
                 padding: 0;
+                font-size: 1.25rem;
             }
 
             .signup-container {
@@ -1153,10 +1164,6 @@
             .country{
                 margin-bottom: 72px;
             }
-            .carousel-container{
-                mask-image: radial-gradient(101% 10% at 50% 102%, transparent 49%, white 50%);
-            }
-
 
             .footer-links {
                 grid-template-columns: repeat(1, 1fr);
@@ -1449,6 +1456,7 @@
         <div id="moodResults" class="mood-results hidden"></div>
     </div>
 
+    
 
 
     <div class="signup-container">
@@ -1469,26 +1477,29 @@
         <div class="footer-links">
             <div class="footer-column">
                 <a href="#" class="footer-link">FAQ</a>
-                <a href="#" class="footer-link">Media Centre</a>
-                <a href="#" class="footer-link">Ways to Watch</a>
-                <a href="#" class="footer-link">Cookie Preferences</a>
+                <a href="#" class="footer-link">Investor Relations</a>
+                <a href="#" class="footer-link">Privacy</a>
                 <a href="#" class="footer-link">Speed Test</a>
             </div>
 
             <div class="footer-column">
                 <a href="#" class="footer-link">Help Centre</a>
-                <a href="#" class="footer-link">Investor Relations</a>
-                <a href="#" class="footer-link">Terms of Use</a>
-                <a href="#" class="footer-link">Corporate Information</a>
+                <a href="#" class="footer-link">Jobs</a>
+                <a href="#" class="footer-link">Cookie Preferences</a>
                 <a href="#" class="footer-link">Legal Notices</a>
             </div>
 
             <div class="footer-column">
                 <a href="#" class="footer-link">Account</a>
-                <a href="#" class="footer-link">Jobs</a>
-                <a href="#" class="footer-link">Privacy</a>
-                <a href="#" class="footer-link">Contact Us</a>
+                <a href="#" class="footer-link">Ways to Watch</a>
+                <a href="#" class="footer-link">Corporate Information</a>
                 <a href="#" class="footer-link">Only on Netflix</a>
+            </div>
+
+            <div class="footer-column">
+                <a href="#" class="footer-link">Media Centre</a>
+                <a href="#" class="footer-link">Terms of Use</a>
+                <a href="#" class="footer-link">Contact Us</a>
             </div>
 
             <div class="footer-column">
@@ -1703,7 +1714,7 @@
                 playPauseBtn.textContent = '⏸';
                 startAutoSlide();
             } else {
-                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                playPauseBtn.innerHTML = '<i class="fa fa-play" ></i>';
                 stopAutoSlide();
             }
         }
@@ -1822,6 +1833,41 @@
                 icon.classList.add('rotate');
             }
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const watchEverywhereCard = document.querySelector('.card:nth-child(3)'); 
+            const getStartedButton = watchEverywhereCard.querySelector('p').nextElementSibling; 
+        
+            if (getStartedButton) {
+                getStartedButton.style.opacity = '0';
+                getStartedButton.style.transform = 'translateY(20px)';
+                getStartedButton.style.transition = 'all 0.5s ease-out';
+            }
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+                        if (getStartedButton) {
+                            getStartedButton.style.opacity = '1';
+                            getStartedButton.style.transform = 'translateY(0)';
+                        }
+                        
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: [0, 0.5, 1] 
+            });
+        
+            if (watchEverywhereCard) {
+                watchEverywhereCard.style.opacity = '0';
+                watchEverywhereCard.style.transform = 'translateY(20px)';
+                watchEverywhereCard.style.transition = 'all 0.5s ease-out 0.2s';
+                
+                observer.observe(watchEverywhereCard);
+            }
+        });
     </script>
 </body>
 
