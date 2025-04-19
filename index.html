@@ -88,8 +88,7 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            display: flex
-        ;
+            display: flex;
             flex-direction: column;
             text-align: center;
             justify-content: flex-end;
@@ -493,33 +492,33 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 
-              background-color 0.2s ease-in-out, 
-              color 0.2s ease-in-out,
-              opacity 0.6s ease,
-              transform 0.6s ease;
-          }
-          
-          .carousel-arrow.right {
+            transition:
+                background-color 0.2s ease-in-out,
+                color 0.2s ease-in-out,
+                opacity 0.6s ease,
+                transform 0.6s ease;
+        }
+
+        .carousel-arrow.right {
             right: 0;
-          }
-          
-          .carousel-arrow.left {
+        }
+
+        .carousel-arrow.left {
             left: 0;
-          }
-          
-          .carousel-arrow.hidden.left {
+        }
+
+        .carousel-arrow.hidden.left {
             transform: translate(-50px, -50%);
             opacity: 0;
             pointer-events: none;
-          }
-          
-          .carousel-arrow.hidden.right {
+        }
+
+        .carousel-arrow.hidden.right {
             transform: translate(50px, -50%);
             opacity: 0;
             pointer-events: none;
-          }
-          
+        }
+
 
 
         .sectionContainer {
@@ -643,7 +642,7 @@
             max-width: 100%;
             overflow-x: auto;
             margin-top: 2rem;
-            min-height: 200px;
+            min-height: 150px;
         }
 
         .mood-box h2 {
@@ -786,8 +785,7 @@
             min-height: 2rem;
             padding: 0.25rem 1rem;
             color: black;
-            display: flex
-        ;
+            display: flex;
             align-items: center;
             line-height: 1;
         }
@@ -867,6 +865,7 @@
             text-align: center;
             max-width: 36rem;
             margin: auto;
+            margin-top: 36px;
         }
 
         .signup-container form {
@@ -1125,8 +1124,9 @@
                 padding: 0;
             }
 
-            .card {
-                margin: 3px 0;
+            .features .card {
+                margin-left: 0;
+                margin-bottom: 0.5rem;
             }
 
             .card img {
@@ -1138,15 +1138,16 @@
                 padding: 0 1.5rem;
             }
 
-            .faq h2{
+            .faq h2 {
                 font-size: 1.25rem;
             }
-            .sectionContainer h2{
+
+            .sectionContainer h2 {
                 font-size: 1.25rem;
             }
 
             .mood-box {
-                padding: 0 1.5rem;
+                padding: 0;
             }
 
             .mood-box h2 {
@@ -1161,7 +1162,8 @@
             .footer {
                 padding: 0 1.5rem;
             }
-            .country{
+
+            .country {
                 margin-bottom: 72px;
             }
 
@@ -1339,6 +1341,19 @@
             </div>
         </div>
 
+
+        <div class="section mood-box">
+            <h2>Mood-Based Recommendations</h2>
+            <div id="emojiContainer">
+                <span class="mood-emoji" data-mood="happy">😊</span>
+                <span class="mood-emoji" data-mood="sad">😢</span>
+                <span class="mood-emoji" data-mood="thriller">😱</span>
+                <span class="mood-emoji" data-mood="romantic">❤️</span>
+                <span class="mood-emoji" data-mood="funny">😂</span>
+            </div>
+            <div id="moodResults" class="mood-results hidden"></div>
+        </div>
+
         <div class="sectionContainer">
             <h2>More reasons to join</h2>
             <div class="section features">
@@ -1444,19 +1459,8 @@
         </div>
     </div>
 
-    <div class="section mood-box">
-        <h2>Mood-Based Recommendations</h2>
-        <div id="emojiContainer">
-            <span class="mood-emoji" data-mood="happy">😊</span>
-            <span class="mood-emoji" data-mood="sad">😢</span>
-            <span class="mood-emoji" data-mood="thriller">😱</span>
-            <span class="mood-emoji" data-mood="romantic">❤️</span>
-            <span class="mood-emoji" data-mood="funny">😂</span>
-        </div>
-        <div id="moodResults" class="mood-results hidden"></div>
-    </div>
 
-    
+
 
 
     <div class="signup-container">
@@ -1572,7 +1576,6 @@
                     document.querySelectorAll('.mood-emoji').forEach(e => e.classList.remove('selected'));
                     emoji.classList.add('selected');
 
-                    resultsDiv.innerHTML = `<p>Loading ${selectedMood} movies...</p>`;
                     resultsDiv.classList.remove('hidden');
 
                     const posters = await fetchMoodMovies(selectedMood);
@@ -1582,11 +1585,11 @@
                     ).join('');
 
                     resultsDiv.innerHTML = `
-        <div class="TrendingSection">
-          <div class="carousel">
-            ${carouselItems}
-          </div>
-        </div>`;
+                        <div class="TrendingSection">
+                        <div class="carousel">
+                            ${carouselItems}
+                        </div>
+                        </div>`;
 
                     setTimeout(() => resultsDiv.classList.add('show'), 50);
                 }
@@ -1611,7 +1614,7 @@
 
             if (progress) {
                 progress.style.animation = 'none';
-                void progress.offsetWidth; 
+                void progress.offsetWidth;
                 progress.style.animation = 'progressAnimation 5s linear forwards';
 
                 progress.addEventListener('animationend', handleProgressEnd);
@@ -1754,21 +1757,21 @@
         const leftGradient = document.getElementById('leftGradient');
         const rightGradient = document.getElementById('rightGradient');
         const horizontalCarousel = document.getElementById('carousel');
-        
+
         function updateVisibility() {
             const scrollLeft = horizontalCarousel.scrollLeft;
             const maxScrollLeft = horizontalCarousel.scrollWidth - horizontalCarousel.clientWidth;
-        
+
             leftArrow.classList.toggle('hidden', scrollLeft <= 0);
             rightArrow.classList.toggle('hidden', scrollLeft >= maxScrollLeft - 1);
-            
-        
+
+
             leftGradient.classList.toggle('hidden', scrollLeft <= 0);
             rightGradient.classList.toggle('hidden', scrollLeft >= maxScrollLeft - 1);
         }
-        
+
         function scrollCarousel(direction) {
-            const scrollAmount = 200; 
+            const scrollAmount = 200;
             if (direction === 'left') {
                 horizontalCarousel.scrollLeft -= scrollAmount;
             } else if (direction === 'right') {
@@ -1776,13 +1779,13 @@
             }
             updateVisibility();
         }
-        
+
         leftArrow.addEventListener('click', () => scrollCarousel('left'));
         rightArrow.addEventListener('click', () => scrollCarousel('right'));
-        
+
         horizontalCarousel.addEventListener('scroll', updateVisibility);
         document.addEventListener('DOMContentLoaded', updateVisibility);
-        
+
 
         function slideRightToLeft() {
             const scrollAmount = 300;
@@ -1834,40 +1837,7 @@
             }
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const watchEverywhereCard = document.querySelector('.card:nth-child(3)'); 
-            const getStartedButton = watchEverywhereCard.querySelector('p').nextElementSibling; 
-        
-            if (getStartedButton) {
-                getStartedButton.style.opacity = '0';
-                getStartedButton.style.transform = 'translateY(20px)';
-                getStartedButton.style.transition = 'all 0.5s ease-out';
-            }
-        
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-                        if (getStartedButton) {
-                            getStartedButton.style.opacity = '1';
-                            getStartedButton.style.transform = 'translateY(0)';
-                        }
-                        
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, {
-                threshold: [0, 0.5, 1] 
-            });
-        
-            if (watchEverywhereCard) {
-                watchEverywhereCard.style.opacity = '0';
-                watchEverywhereCard.style.transform = 'translateY(20px)';
-                watchEverywhereCard.style.transition = 'all 0.5s ease-out 0.2s';
-                
-                observer.observe(watchEverywhereCard);
-            }
-        });
+
     </script>
 </body>
 
