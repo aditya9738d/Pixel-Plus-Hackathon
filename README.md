@@ -16,11 +16,17 @@ https://pixel-plus-hackathon.vercel.app
 ---
 
 ## ✨ New Feature Added (Enhancement)
-- 🔁 **Custom Carousel Component**:
-  - Supports **autoplay**
-  - Includes **play/pause button**
-  - **Dot indicators** for current slide
-  - Built from scratch using plain HTML, CSS, and JS
+### 🎭 Mood-Based Movie Recommendation
+- Users can select a **mood** (e.g., Happy, Sad, Excited, Chill, Romantic).
+- The site dynamically displays movie posters and suggestions that match the selected mood.
+- Powered by **The Movie Database (TMDB) API** to fetch real-time mood-relevant movies.
+- Enhances user engagement by offering personalized content based on emotions.
+
+### 🔁 Custom Carousel Component:
+- Supports **autoplay**
+- Includes **play/pause button**
+- **Dot indicators** for current slide
+- Built from scratch using plain HTML, CSS, and JS
 
 ---
 
@@ -30,6 +36,7 @@ https://pixel-plus-hackathon.vercel.app
 - JavaScript (Vanilla)
 - [Google Fonts](https://fonts.google.com/)
 - [Font Awesome](https://fontawesome.com/)
+- [TMDB API](https://www.themoviedb.org/documentation/api)
 
 ---
 
@@ -41,5 +48,4 @@ https://pixel-plus-hackathon.vercel.app
 
 ## 📬 Submission
 Submitted for the Pixel Plus Hackathon 2025.  
-Built by Aditya
-
+Built by **Aditya**
