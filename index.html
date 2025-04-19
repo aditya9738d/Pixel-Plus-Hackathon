@@ -324,7 +324,6 @@
         .dots-controls button {
             background: transparent;
             color: #fff;
-            font-size: 1.5rem;
             cursor: pointer;
             line-height: 1;
             border: none;
@@ -1010,6 +1009,7 @@
 
             .form {
                 flex-direction: column;
+                padding-bottom: 0;
             }
 
             .form input {
@@ -1036,12 +1036,16 @@
                 text-align: -webkit-center;
                 font-size: 1.5rem;
                 font-weight: 700;
+                margin-bottom: 0.5rem;
             }
 
             .overlay h2 {
                 align-self: center;
-                margin-bottom: 1rem;
-                font-size: 1.25rem;
+                margin-bottom: 1.5rem;
+                font-size: 1rem;
+            }
+            .overlay p{
+                font-size: 0.87rem;
             }
 
             .overlay h6 {
@@ -1166,6 +1170,21 @@
             .country {
                 margin-bottom: 72px;
             }
+            .carousel-item{
+                width: 6.5rem;
+                height: 13rem;
+            }
+            .carousel-item .number{
+                font-size: 3rem;
+            }
+            .faq button{
+                font-size: 0.875rem;
+                color: white;
+            }
+            .faq .answer .content{
+                font-size: 0.875rem;
+                color: white;
+            }
 
             .footer-links {
                 grid-template-columns: repeat(1, 1fr);
@@ -1277,7 +1296,7 @@
             <div class="BottomOverlay"></div>
         </div>
         <div class="dots-controls">
-            <button id="playPauseBtn" onclick="toggleAutoSlide()">⏸</button>
+            <button id="playPauseBtn" onclick="toggleAutoSlide()"><i class="fa fa-pause" ></i></button>
             <div class="dots">
                 <div class="dot active" onclick="goToSlide(0)">
                     <div class="progress"></div>
@@ -1714,7 +1733,7 @@
             isAutoPlaying = !isAutoPlaying;
 
             if (isAutoPlaying) {
-                playPauseBtn.textContent = '⏸';
+                playPauseBtn.innerHTML = '<i class="fa fa-pause" ></i>';
                 startAutoSlide();
             } else {
                 playPauseBtn.innerHTML = '<i class="fa fa-play" ></i>';
